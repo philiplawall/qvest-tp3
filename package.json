@@ -1,21 +1,22 @@
 {
-  "name": "qvest-tp3",
-  "version": "0.0.0",
-  "license": "",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 4173",
-    "archive": "ch5-cli archive -p QvestTp -d dist -o ch5dist",
-    "upload": "ch5-cli deploy -H 10.10.1.31 -t touchscreen -p ch5dist/QvestTp.ch5z",
-    "au": "yarn archive && yarn upload",
-    "bau": "yarn build && yarn archive && yarn upload"
-  },
-  "dependencies": {
-    "vue": "^3.2.37"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.3",
-    "vite": "^2.9.12"
-  }
+    "name": "qvest-tp3",
+    "version": "0.0.0",
+    "license": "",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview --port 4173",
+        "archive": "ch5-cli archive -p QvestTp -d dist -o ch5dist",
+        "upload": "ch5-cli deploy -H 10.10.1.31 -t touchscreen -p ch5dist/QvestTp.ch5z",
+        "au": "yarn archive && yarn upload",
+        "bau": "yarn build && yarn archive && yarn upload",
+        "http": "http-server dist"
+    },
+    "dependencies": {
+        "vue": "^3.2.37"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^2.3.3",
+        "vite": "^2.9.12"
+    }
 }
