@@ -1,22 +1,31 @@
 {
     "name": "qvest-tp3",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "license": "",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
+        "vserve": "vue-cli-service serve",
+        "vbuild": "vue-cli-service build",
         "preview": "vite preview --port 4173",
+        "cresprep": "replace-in-file type=\\\"module\\\" defer dist/index.html",
         "archive": "ch5-cli archive -p QvestTp -d dist -o ch5dist",
         "upload": "ch5-cli deploy -H 10.10.1.31 -t touchscreen -p ch5dist/QvestTp.ch5z",
-        "au": "yarn archive && yarn upload",
-        "bau": "yarn build && yarn archive && yarn upload",
+        "au": "yarn cresprep && yarn archive && yarn upload",
+        "bau": "yarn build && yarn cresprep && yarn archive && yarn upload",
         "http": "http-server dist"
     },
     "dependencies": {
         "vue": "^3.2.37"
     },
     "devDependencies": {
+        "@vitejs/plugin-legacy": "^1.8.2",
         "@vitejs/plugin-vue": "^2.3.3",
+        "@vue/cli-plugin-babel": "^5.0.8",
+        "@vue/cli-plugin-eslint": "^5.0.8",
+        "@vue/cli-plugin-router": "^5.0.8",
+        "@vue/cli-plugin-vuex": "^5.0.8",
+        "@vue/cli-service": "^5.0.8",
         "vite": "^2.9.12"
     }
 }

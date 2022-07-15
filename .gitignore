@@ -26,3 +26,6 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+ch5dist/*
+ch5dist/QvestTp.ch5z
